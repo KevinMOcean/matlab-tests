@@ -9,7 +9,7 @@ if cnt > 0
     % set edge for spectrometers found except master source
     for i = (triggerSource + 1):cnt
         % Set hardware edge trigger mode
-        wrap.setExternalTriggerMode(4);
+        wrap.setExternalTriggerMode(triggerSource, 4);
     end
     
     % request spectrum and wait for trigger
